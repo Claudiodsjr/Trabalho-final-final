@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+file = open("dados", "r")
+cont = file.read()
+
+for line in cont:
+	i = cont[:2]/cont[2:]
+	print(i)
