@@ -1,8 +1,25 @@
 #!/usr/bin/env python3
+import sys
 
-file = open("dados", "r")
-cont = file.read()
+arquivo = sys.argv[1]
 
-for line in cont:
-	i = cont[:2]/cont[2:]
-	print(i)
+with open(arquivo, 'r') as f:
+	results = [[int(entry) for entry in line.split()] for line in f.readlines()]
+	print(results)
+
+value = 0
+va = 1
+
+for lists in results:
+	x = results[value][0]
+	y = results[value][1]
+	value += 1
+	i = x/y
+	severity = -0.00942 + 0.0167 + i
+	sev = severity * 100
+	s = round(sev, 2)
+	print(f'Para a planta {va} a incidência da doença é {i} e a severidade é {s}')
+	va += 1
+	
+
+ 
