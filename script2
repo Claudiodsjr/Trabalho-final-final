@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+import sys
+
+value = 0
+value2 = 1
+
+arquivo = sys.argv[1]
+
+with open(arquivo, 'r') as g:
+	for line, a in enumerate(g,1):
+		print(f'{value2}. {a}')
+		value2 += 1
+	result = sum(map(int, g))
+	print(result)
+	ans = sum(int(line) for line in g if line.strip().isnumeric())
+	print(ans)
+
+
+#	re = [[int(entry) for entry in line.split()] for line in g.readlines()]
+#	lista = list(g)
+#	print(lista)
+#	sum(lista)
+#	print(sum(lista))
+
+
+
+
+
+#	for lines in re:
+#		a = re[value][0]
+#		b = re[value2][0]
+#		value += 2
+#		value2 += 2
+#		c = a+b
+#		print(c)
+
+#print(sum(c))
+
