@@ -16,7 +16,7 @@ with open(arquivo, 'r') as f, open(arquivo2, 'w') as g:
 		i = x/y
 		severity = -0.00942 + 0.0167 + i
 		sev = severity * 100
-		s = round(sev)
+		s = round(sev, 2)
 		g.write(str(s) + "\n")
 		print(f'Para a planta {va} a incidência da doença é {i} e a severidade é {s}')
 		va += 1

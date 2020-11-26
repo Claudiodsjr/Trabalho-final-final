@@ -5,15 +5,27 @@ value = 0
 value2 = 1
 
 arquivo = sys.argv[1]
+conv_g = []
 
 with open(arquivo, 'r') as g:
-	for line, a in enumerate(g,1):
+	for lines in g:
+		conv_g.append(lines.strip())
+	print(conv_g)
+	for line, a in enumerate(conv_g, 1):
 		print(f'{value2}. {a}')
 		value2 += 1
-	result = sum(map(int, g))
+	result = sum(map(int, conv_g))
 	print(result)
-	ans = sum(int(line) for line in g if line.strip().isnumeric())
-	print(ans)
+	print(len(conv_g))
+	mean = result/len(conv_g)
+	print(round(mean, 2))
+#Criar agora os if elif e else para os intervalos de % de severidade, para responder se aplica ou não aplica!!!
+
+
+
+
+#	ans = sum(int(line) for line in conv_g if line.strip().isnumeric())
+#	print(ans)
 
 
 #	re = [[int(entry) for entry in line.split()] for line in g.readlines()]
