@@ -26,19 +26,14 @@ with open(arquivo, 'r') as f, open(arquivo2, 'w') as g:
 		conv_g.append(s)
 	result = sum(map(int, conv_g))
 	print(f'A soma das severidades é {result}')	
-	print(len(conv_g))
 	mean = result/len(conv_g)
 	m = round(mean, 2)
-	print(round(mean, 2))	
+	print(f'A média da severidade no campo é de {m}')	
 	if mean < 25:
 		print(f'Sua severidade média no campo é {m}, não é necessário fazer aplicação para a ferrugem do milho doce.')
 	elif 25 < mean < 40:
 		print(f'Sua severidade média no campo é {m}, não é necessário aplicar de imediato, mas deve-se acompanhar a situação com maior cautela.')
 	else:
 		print(f'Sua severidade média no campo é {m}, é recomendado fazer a aplicação para a ferrugem do milho doce.')
-
-
-#	print(conv_g)
-
 
 print(f'Severidades escritas em {arquivo2}')
