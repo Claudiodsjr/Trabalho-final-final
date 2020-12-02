@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-arquivo = input("Ensira o arquivo 1 contendo os dados da amostragem, no formato .txt: ")
-arquivo2 = input("Ensira o arquivo 2, onde serão salvas as severidades na mesma ordem do arquivo 1, também em .txt: ")
+arquivo = input("Insira o arquivo 1 contendo os dados da amostragem, no formato .txt: ")
+arquivo2 = input("Insira o arquivo 2, onde serão salvas as severidades na mesma ordem do arquivo 1, também em .txt: ")
 
 value = 0
 va = 1
